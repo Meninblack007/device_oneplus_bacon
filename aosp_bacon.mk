@@ -1,26 +1,18 @@
 # Release name
 PRODUCT_RELEASE_NAME := bacon
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
-
-# Inherit some common SOKP stuff.
-$(call inherit-product, vendor/sokp/config/common_full_phone.mk)
-
-# Enhanced NFC
-$(call inherit-product, vendor/sokp/config/nfc_enhanced.mk)
+# Inherit some common Pure Nexus stuff.
+$(call inherit-product, vendor/nexus/main.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/oneplus/bacon/full_bacon.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := bacon
-PRODUCT_NAME := sokp_bacon
+PRODUCT_NAME := aosp_bacon
 PRODUCT_BRAND := Oneplus
 PRODUCT_MODEL := Oneplus One
 PRODUCT_MANUFACTURER := Oneplus
-
 
 TARGET_CONTINUOUS_SPLASH_ENABLED := true
 
